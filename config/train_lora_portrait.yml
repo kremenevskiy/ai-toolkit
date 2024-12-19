@@ -48,7 +48,7 @@ config:
         optimizer: "adamw8bit"
         lr: 1e-4
         # uncomment this to skip the pre training sample
-#        skip_first_sample: true
+        skip_first_sample: true
         # uncomment to completely disable sampling
 #        disable_sampling: true
         # uncomment to use new vell curved weighting. Experimental but may produce better results
