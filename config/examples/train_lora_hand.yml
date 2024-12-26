@@ -31,7 +31,7 @@ config:
         # images will automatically be resized and bucketed into the resolution specified
         # on windows, escape back slashes with another backslash so
         # "C:\\path\\to\\images\\folder"
-        - folder_path: "data/processed"
+        - folder_path: "data/processed/nastya"
           caption_ext: "txt"
           caption_dropout_rate: 0.05  # will drop out the caption 5% of time
           shuffle_tokens: false  # shuffle caption order, split by commas
@@ -46,11 +46,11 @@ config:
         gradient_checkpointing: true  # need the on unless you have a ton of vram
         noise_scheduler: "flowmatch" # for training only
         optimizer: "adamw8bit"
-        lr: 1e-4
+        lr: 5e-5
         # uncomment this to skip the pre training sample
-        skip_first_sample: true
+        skip_first_sample: false
         # uncomment to completely disable sampling
-        disable_sampling: true
+        disable_sampling: false
         # uncomment to use new vell curved weighting. Experimental but may produce better results
 #        linear_timesteps: true
 
@@ -73,13 +73,13 @@ config:
         width: 1024
         height: 1024
         prompts:
-          - "[trigger], A sharply dressed businessman in a tailored suit and polished shoes stands beside a shiny black Porsche parked on a modern city street, exuding success and sophistication."
-          - "[trigger], A man posing with an elegant, attractive woman in a glamorous setting."
-          - "[trigger], A man walking through the bustling streets of New York City Wall Street."
-          - "[trigger], A casually dressed man chuckles as a cheeky monkey mimics his gestures from within the enclosure, the vibrant backdrop of the zoo buzzing with families and laughter."
-          - "[trigger], Wearing a simple white shirt, a man kneels on dusty ground, handing colorful school supplies to a group of smiling children in a small Indian village, their joy lighting up the humble classroom."
-          - "[trigger], Standing poised with gold scissors in hand, a well-dressed entrepreneur smiles as he ceremoniously cuts the red ribbon, surrounded by a cheering audience and celebratory decorations."
-          - "[trigger], A confident figure poses in front of the New York Stock Exchangeon Wall Street."
+          - "[trigger], A woman in a cozy red sweater stands by a beautifully decorated Christmas tree, holding a steaming mug of hot cocoa. The warm glow of fairy lights and the scent of pine fill the air, creating a festive and magical atmosphere."
+          - "[trigger], A woman in a sleek black dress leans casually against a shiny red Porsche, her sunglasses reflecting the city skyline. The car’s polished surface gleams under the sunlight, exuding elegance and sophistication."
+          - "[trigger], A woman stands barefoot on a sandy beach, the waves gently lapping at her feet. She wears a flowing white dress that flutters in the ocean breeze, her gaze fixed on the horizon as the sun sets in a blaze of orange and pink."
+          - "[trigger], A girl smiles brightly as she takes a selfie in front of a vibrant street mural. Her phone captures the colorful artwork behind her, while passersby blur in the background, adding a lively energy to the scene."
+          - "[trigger], A woman sits at a candlelit table in an upscale restaurant, her elegant dress catching the soft light. She sips a glass of wine, her eyes scanning the menu as the ambient chatter and clinking of glasses create a warm, inviting atmosphere."
+          - "[trigger], A confident woman stands on a stage, holding a microphone as she addresses a large audience. Her poised demeanor and expressive gestures command attention, while the spotlight highlights her against the backdrop of a packed auditorium."
+          - "[trigger], A woman stands in a room filled with an array of large, extravagant bouquets—each one unique, from towering sunflowers to cascading orchids and vibrant peonies. The bouquets are artfully arranged in vases of different shapes and sizes, their colors and fragrances blending into a breathtaking display. She gently holds a single rose, her expression serene as she admires the floral masterpiece around her."
         neg: ""  # not used on flux
         seed: 42
         walk_seed: true
