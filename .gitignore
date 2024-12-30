@@ -180,3 +180,4 @@ cython_debug/
 ._.DS_Store
 
 *.safetensors
+/data/processed
