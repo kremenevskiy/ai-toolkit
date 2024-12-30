@@ -178,3 +178,5 @@ cython_debug/
 .vscode/settings.json
 .DS_Store
 ._.DS_Store
+
+*.safetensors
