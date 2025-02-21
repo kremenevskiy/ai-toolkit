@@ -169,6 +169,8 @@ cython_debug/
 /config/*
 !/config/examples
 !/config/train_lora_portrait.yml
+!/config/test_train
+!/config/train
 /output/*
 !/output/.gitkeep
 /extensions/*
